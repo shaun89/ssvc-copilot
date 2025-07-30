@@ -65,6 +65,16 @@ This project is under active initial development. Nothing is functional yet — 
 
 ---
 
+## 🧠 SSVC Decision Points and MVP Data Sources
+
+| Decision Point         | Description                                                                | MVP Data Source or Approximation                                |
+|------------------------|----------------------------------------------------------------------------|------------------------------------------------------------------|
+| **Exploit Status**     | Is the vulnerability being exploited?                                      | CISA KEV list, Exploit DB, PoC presence                          |
+| **Technical Impact**   | How much does the vulnerability affect the system?                         | CVSS score and impact vector (CIA triad)                         |
+| **Automatable**        | Can an attacker easily automate exploitation?                              | Public PoC scripts, EPSS score > threshold                       |
+| **Mission Prevalence** | Is the affected asset widely deployed on critical missions?                | Asset role metadata (e.g., NetBox tag, manual override)          |
+| **Public Safety Impact** | Could this endanger human life or public safety?                         | Asset type (e.g., medical, critical infrastructure), manual tag  |
+| **Utility at Risk**    | Could this disrupt a utility or essential function?                        | Sector + asset criticality tag                       
 ## 🔭 Future Data Sources (Post-MVP)
 
 While this MVP focuses on structured scan data and static enrichment, future versions of SSVC Copilot may incorporate:
