@@ -83,7 +83,7 @@ While this MVP focuses on structured scan data and static enrichment, future ver
 
 - **Network traffic logs** (e.g., Zeek): to detect real-time exploit activity  
 - **Suricata or IDS alerts**: to confirm active exploitation of known CVEs  
-- **Vulnerability management systems** (e.g., Tanium, Qualys): for live patch status  
+- **Vulnerability management systems** (e.g., OpenVAS, Tenable, Qualys): for live patch status  
 - **System telemetry**: process/service data or behavioral anomalies  
 - **Threat intelligence feeds**: dynamic intel for time-sensitive scoring  
 
