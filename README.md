@@ -20,7 +20,7 @@ The goal: help IT and security teams prioritize what to patch and why — in a w
 
 ## 🛠️ What This Project Will Do
 
-- Ingest vulnerability scan data (e.g., Nessus)
+- Ingest vulnerability scan data (e.g., OpenVAS or Nessus)
 - Build a lightweight asset inventory from scan metadata
 - Enrich CVEs with external data (e.g., EPSS, CISA KEV, CVSS)
 - Apply SSVC decision rules (initially rule-based, later enhanced with AI)
