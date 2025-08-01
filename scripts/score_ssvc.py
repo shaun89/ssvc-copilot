@@ -1,29 +1,30 @@
 import pandas as pd
+import argparse
 
-def score_ssvc(row):
-    exploit_status = row.get("kev_flag", False) or row.get("epss_score", 0) >= 0.8
-    automatable = row.get("epss_score", 0) >= 0.5
+def score_row(row):
+    exploit_status = row.get("kev_flag", False) or row.get("epss", 0) >= 0.8
+    automatable = row.get("epss", 0) >= 0.5
+    mission = str(row.get("cf_mission_prevalence", "")).lower()
 
-    if exploit_status:
+    if exploit_status and mission == "essential":
         return "Act"
-    elif automatable:
-        return "Track"
-    else:
+    elif exploit_status or (automatable and mission in ["support", "essential"]):
+        return "Attend"
+    elif row.get("epss", 0) < 0.1 and mission == "minimal":
         return "Defer"
+    else:
+        return "Track"
 
-# Load uploaded CSV
-input_file = "cve_enrichment.csv"
-output_file = "ssvc_decisions.csv"
+def main(input_path, output_path):
+    df = pd.read_csv(input_path)
+    df["ssvc_decision"] = df.apply(score_row, axis=1)
+    df.to_csv(output_path, index=False)
+    print(f"[✓] SSVC decisions written to: {output_path}")
 
-df = pd.read_csv(input_file)
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Score scan data using SSVC rules")
+    parser.add_argument("--input", required=True, help="Path to enriched input CSV")
+    parser.add_argument("--output", required=True, help="Path to save output with SSVC decisions")
+    args = parser.parse_args()
 
-# Add SSVC decision fields
-df["ssvc_exploit_status"] = df.apply(lambda row: row.get("kev_flag", False) or row.get("epss_score", 0) >= 0.8, axis=1)
-df["ssvc_automatable"] = df["epss_score"] >= 0.5
-df["ssvc_technical_impact"] = "unknown"
-df["ssvc_mission_prevalence"] = "unknown"
-df["ssvc_decision"] = df.apply(score_ssvc, axis=1)
-
-# Save to file
-df.to_csv(output_file, index=False)
-print("✅ SSVC decisions saved to ssvc_decisions.csv")
+    main(args.input, args.output)
