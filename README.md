@@ -2,6 +2,8 @@
 
 **AI-augmented vulnerability prioritization using the Stakeholder-Specific Vulnerability Categorization (SSVC) framework**
 
+## [Quickstart Guide](https://github.com/shaun89/ssvc-copilot/blob/main/quickstart.md)
+
 ---
 
 ## 🧠 What Is This?
