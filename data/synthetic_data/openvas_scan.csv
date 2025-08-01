@@ -1,0 +1,33 @@
+Host,Port,Threat,CVE,Name,Summary,Timestamp
+10.0.2.211,515/tcp,High,CVE-2021-34527,PrintNightmare RCE,PrintNightmare RCE,2025-08-01 13:30:52 UTC
+10.0.2.211,445/tcp,Critical,CVE-2020-1472,Zerologon Privilege Escalation,Zerologon Privilege Escalation,2025-08-01 13:30:52 UTC
+10.0.2.211,443/tcp,Medium,CVE-2020-1032,Honeywell Sustained DoS,Honeywell Sustained DoS,2025-08-01 13:30:52 UTC
+10.0.2.72,8080/tcp,Critical,CVE-2021-44228,Apache Log4j RCE,Apache Log4j RCE,2025-08-01 13:30:52 UTC
+10.0.2.72,515/tcp,High,CVE-2021-34527,PrintNightmare RCE,PrintNightmare RCE,2025-08-01 13:30:52 UTC
+10.0.2.72,3389/tcp,High,CVE-2019-0708,BlueKeep RDP RCE,BlueKeep RDP RCE,2025-08-01 13:30:52 UTC
+10.0.5.120,515/tcp,High,CVE-2021-34527,PrintNightmare RCE,PrintNightmare RCE,2025-08-01 13:30:52 UTC
+10.0.5.120,443/tcp,High,CVE-2023-23397,Outlook NTLM Credential Leak,Outlook NTLM Credential Leak,2025-08-01 13:30:52 UTC
+10.0.5.120,445/tcp,Critical,CVE-2020-1472,Zerologon Privilege Escalation,Zerologon Privilege Escalation,2025-08-01 13:30:52 UTC
+10.0.5.120,443/tcp,Medium,CVE-2020-1032,Honeywell Sustained DoS,Honeywell Sustained DoS,2025-08-01 13:30:52 UTC
+10.0.4.135,,Medium,,Unsupported Operating System,Unsupported Operating System,2025-08-01 13:30:52 UTC
+10.0.4.135,443/tcp,High,CVE-2023-23397,Outlook NTLM Credential Leak,Outlook NTLM Credential Leak,2025-08-01 13:30:52 UTC
+10.0.4.135,80/tcp,High,CVE-2022-30190,Follina MSDT RCE,Follina MSDT RCE,2025-08-01 13:30:52 UTC
+10.0.3.205,3389/tcp,High,CVE-2019-0708,BlueKeep RDP RCE,BlueKeep RDP RCE,2025-08-01 13:30:52 UTC
+10.0.3.205,443/tcp,Medium,CVE-2020-1032,Honeywell Sustained DoS,Honeywell Sustained DoS,2025-08-01 13:30:52 UTC
+192.168.100.75,443/tcp,High,CVE-2023-23397,Outlook NTLM Credential Leak,Outlook NTLM Credential Leak,2025-08-01 13:30:52 UTC
+192.168.100.75,80/tcp,Low,,Directory Listing Enabled,Directory Listing Enabled,2025-08-01 13:30:52 UTC
+192.168.100.75,,Medium,,Unsupported Operating System,Unsupported Operating System,2025-08-01 13:30:52 UTC
+192.168.100.75,80/tcp,High,CVE-2022-30190,Follina MSDT RCE,Follina MSDT RCE,2025-08-01 13:30:52 UTC
+192.168.100.215,80/tcp,High,CVE-2022-30190,Follina MSDT RCE,Follina MSDT RCE,2025-08-01 13:30:52 UTC
+192.168.100.215,515/tcp,High,CVE-2021-34527,PrintNightmare RCE,PrintNightmare RCE,2025-08-01 13:30:52 UTC
+192.168.100.215,80/tcp,Low,,Directory Listing Enabled,Directory Listing Enabled,2025-08-01 13:30:52 UTC
+192.168.100.215,8080/tcp,Critical,CVE-2021-44228,Apache Log4j RCE,Apache Log4j RCE,2025-08-01 13:30:52 UTC
+192.168.100.59,80/tcp,Low,CVE-2017-1010,Honeywell BMS XSS,Honeywell BMS XSS,2025-08-01 13:30:52 UTC
+192.168.100.59,443/tcp,High,CVE-2023-23397,Outlook NTLM Credential Leak,Outlook NTLM Credential Leak,2025-08-01 13:30:52 UTC
+192.168.100.77,443/tcp,Medium,CVE-2020-1032,Honeywell Sustained DoS,Honeywell Sustained DoS,2025-08-01 13:30:52 UTC
+192.168.100.77,443/tcp,High,CVE-2023-23397,Outlook NTLM Credential Leak,Outlook NTLM Credential Leak,2025-08-01 13:30:52 UTC
+192.168.100.77,80/tcp,Low,,Directory Listing Enabled,Directory Listing Enabled,2025-08-01 13:30:52 UTC
+192.168.100.77,8080/tcp,Critical,CVE-2021-44228,Apache Log4j RCE,Apache Log4j RCE,2025-08-01 13:30:52 UTC
+192.168.100.25,443/tcp,High,CVE-2023-23397,Outlook NTLM Credential Leak,Outlook NTLM Credential Leak,2025-08-01 13:30:52 UTC
+192.168.100.25,80/tcp,Low,CVE-2017-1010,Honeywell BMS XSS,Honeywell BMS XSS,2025-08-01 13:30:52 UTC
+192.168.100.25,80/tcp,High,CVE-2022-30190,Follina MSDT RCE,Follina MSDT RCE,2025-08-01 13:30:52 UTC

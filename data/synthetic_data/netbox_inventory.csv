@@ -1,0 +1,11 @@
+Name,Status,Site,Device Role,Device Type,Manufacturer,cf_mission_prevalence,IP Address
+it-web-01,active,hq,web-server,virtual,generic,Support,10.0.2.211
+it-db-01,active,hq,database-server,virtual,generic,Essential,10.0.2.72
+it-fw-01,active,hq,firewall,appliance,cisco,Support,10.0.5.120
+it-win-01,active,hq,windows-host,workstation,dell,Minimal,10.0.4.135
+it-linux-01,active,hq,linux-host,workstation,hp,Minimal,10.0.3.205
+ot-bms-01,active,plant-a,bms-controller,embedded,honeywell,Essential,192.168.100.75
+ot-plc-01,active,plant-a,plc,embedded,rockwell,Essential,192.168.100.215
+ot-rtu-01,active,plant-a,rtu,embedded,schneider,Support,192.168.100.59
+ot-scada-01,active,plant-a,scada-gateway,appliance,honeywell,Support,192.168.100.77
+ot-sensor-01,active,plant-a,sensor-node,iot,siemens,Minimal,192.168.100.25
