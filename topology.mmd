@@ -1,0 +1,66 @@
+flowchart TD
+  subgraph INTERNET
+    INTERNET(INTERNET)
+  end
+  subgraph EDGE-FW
+    EDGE-FW-1(EDGE-FW-1)
+    it-fw-01(it-fw-01)
+    ot-scada-01(ot-scada-01)
+  end
+  subgraph DMZ
+    DMZ-SW-1(DMZ-SW-1)
+    JUMP-BOX-1(JUMP-BOX-1)
+    REVERSE-PROXY-1(REVERSE-PROXY-1)
+    IDS-DMZ-1(IDS-DMZ-1)
+    it-web-01(it-web-01)
+  end
+  subgraph CORE-FW
+    CORE-FW-1(CORE-FW-1)
+  end
+  subgraph IT-CORE
+    IT-CORE-SW-1(IT-CORE-SW-1)
+    IDS-IT-1(IDS-IT-1)
+    it-db-01(it-db-01)
+    ot-sensor-01(ot-sensor-01)
+  end
+  subgraph IT-ACCESS
+    it-win-01(it-win-01)
+    it-linux-01(it-linux-01)
+    ot-bms-01(ot-bms-01)
+  end
+  subgraph OT-FW
+    OT-FW-1(OT-FW-1)
+  end
+  subgraph OT-CORE
+    OT-CORE-SW-1(OT-CORE-SW-1)
+    IDS-OT-1(IDS-OT-1)
+  end
+  subgraph OT-ACCESS
+    ot-plc-01(ot-plc-01)
+    ot-rtu-01(ot-rtu-01)
+  end
+  INTERNET -->|WAN→DMZ| EDGE-FW-1
+  EDGE-FW-1 -->|DMZ| DMZ-SW-1
+  EDGE-FW-1 -->|WAN→IT| CORE-FW-1
+  EDGE-FW-1 -->|Edge| EDGE-FW-1
+  EDGE-FW-1 -->|Edge| it-fw-01
+  EDGE-FW-1 -->|Edge| ot-scada-01
+  CORE-FW-1 -->|IT-CORE| IT-CORE-SW-1
+  CORE-FW-1 -->|IT↔OT| OT-FW-1
+  CORE-FW-1 -->|Mgmt| JUMP-BOX-1
+  OT-FW-1 -->|OT-CORE| OT-CORE-SW-1
+  DMZ-SW-1 -->|DMZ| IDS-DMZ-1
+  DMZ-SW-1 -->|DMZ| REVERSE-PROXY-1
+  DMZ-SW-1 -->|DMZ| DMZ-SW-1
+  DMZ-SW-1 -->|DMZ| JUMP-BOX-1
+  DMZ-SW-1 -->|DMZ| it-web-01
+  IT-CORE-SW-1 -->|IT-CORE| IDS-IT-1
+  IT-CORE-SW-1 -->|IT-CORE| IT-CORE-SW-1
+  IT-CORE-SW-1 -->|IT-CORE| it-db-01
+  IT-CORE-SW-1 -->|Access| it-win-01
+  IT-CORE-SW-1 -->|Access| it-linux-01
+  IT-CORE-SW-1 -->|Access| ot-bms-01
+  IT-CORE-SW-1 -->|IT-CORE| ot-sensor-01
+  OT-CORE-SW-1 -->|SPAN| IDS-OT-1
+  OT-CORE-SW-1 -->|OT-ACCESS| ot-plc-01
+  OT-CORE-SW-1 -->|OT-ACCESS| ot-rtu-01
