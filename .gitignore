@@ -1,5 +1,15 @@
-/tmp/
+# project
 __pycache__/
 *.pyc
-*.log
-.env
+
+# local data & outputs (keep placeholders)
+data/*
+!data/.gitkeep
+tmp/*
+!tmp/.gitkeep
+
+# OS/editor
+.DS_Store
+*.swp
+.vscode/
+.idea/
