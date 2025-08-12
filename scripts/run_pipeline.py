@@ -39,4 +39,15 @@ if __name__ == "__main__":
         f"python3 scripts/score_ssvc.py --input {epss_path} --output {final_path}"
     )
 
+    # Add this import at the top
+    from scripts import llm_explainer
+
+    # Add this block at the end of the pipeline (or wherever fits best)
+    print("[STEP 4] Generating SSVC explanations via LLM")
+    llm_explainer.run(
+        input_csv='tmp/ssvc_scored.csv',
+        output_csv='tmp/ssvc_scored_with_llm.csv',
+        limit=10  # adjust or remove for full dataset
+)
+
     print(f"\n✅ Pipeline complete! Final SSVC output: {final_path}")
